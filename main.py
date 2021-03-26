@@ -5,8 +5,8 @@ df = pd.read_excel("articlelinks.xlsx")
 df = df.dropna(subset=["标题"])
 
 platform = st.radio("Which platform?",
-            ('微信', '知乎', '科学网', '少数派', 'medium'))
-keyword = st.text_input("搜索关键词", "Roam")
+            ('微信', '知乎', '科学网', '少数派'))
+keyword = st.text_input("搜索关键词", "Python")
 
 df1 = df[df['标题'].str.contains(keyword)]
 df1 = df1.dropna(subset=[platform]).reset_index()[['标题', platform]]
