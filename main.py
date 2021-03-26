@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd 
 
+st.title("「玉树芝兰」文章检索")
+
 df = pd.read_excel("articlelinks.xlsx")
 df = df.dropna(subset=["标题"])
 
