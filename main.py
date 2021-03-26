@@ -3,7 +3,6 @@ import pandas as pd
 
 df = pd.read_excel("articlelinks.xlsx")
 df = df.dropna(subset=["标题"])
-st.dataframe(df)
 
 platform = st.radio("Which platform?",
             ('微信', '知乎', '科学网', '少数派', 'medium'))
